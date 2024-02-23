@@ -16,14 +16,18 @@ class StockTransactionController extends AbstractController
     {
         // Temporary code
         $order = new class {
-          public function getBuyer(): object
-          {
-              return new class {
-                  public function getEmail(): string {
-                      return 'email@email.email';
-                  }
-              };
-          }
+            public function getId(): int
+            {
+                return 1;
+            }
+            public function getBuyer(): object
+            {
+                return new class {
+                    public function getEmail(): string {
+                        return 'email@email.email';
+                    }
+                };
+            }
         };
 
         // TODO: Dispatch confirmation message
